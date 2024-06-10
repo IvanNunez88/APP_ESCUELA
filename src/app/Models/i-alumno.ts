@@ -8,4 +8,5 @@ export interface iAlumno {
     aPaterno: string,
     aMaterno: string,
     idEstatus: boolean
+    
 }
