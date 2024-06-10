@@ -55,12 +55,10 @@ export class ModalAlumnoComponent implements OnInit {
   constructor(
     private modalActual: MatDialogRef<ModalAlumnoComponent>,
     private fb: FormBuilder,
-    // private dateAdapter: DateAdapter<Date>,
     private _alumnoServicio: AlumnoService,
     @Inject(MAT_DIALOG_DATA) public datosAlumno: iAlumno,
 
   ) {
-
     this.formularioAlumno = this.fb.group({
       nombre: ['', Validators.required],
       aPaterno: ['', Validators.required],
@@ -74,7 +72,6 @@ export class ModalAlumnoComponent implements OnInit {
       this.botonAccion = "Actualizar";
       this.mostrarToggle = true;
 
-
       this.formularioAlumno.patchValue({
         nombre: this.datosAlumno.nombre,
         aPaterno: this.datosAlumno.aPaterno,
@@ -87,10 +84,7 @@ export class ModalAlumnoComponent implements OnInit {
 
   }
 
-  ngOnInit(): void {
-
-  }
-
+  ngOnInit(): void { }
 
   guardarEditar() {
 
