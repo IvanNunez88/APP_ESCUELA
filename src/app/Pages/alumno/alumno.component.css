@@ -1,0 +1,15 @@
+table {
+    width: 100%;
+}
+
+.mat-form-field {
+    font-size: 15px;
+
+}
+
+/* width: 30%; */
+
+.mat-header-cell {
+    font-size: 17px;
+    font-weight: bold;
+}

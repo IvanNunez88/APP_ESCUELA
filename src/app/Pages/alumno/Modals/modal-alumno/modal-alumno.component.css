@@ -1,0 +1,44 @@
+.mat-form-field {
+    width: 98%;
+    margin: 1%;
+}
+
+.mat-50 {
+    width: 48%;
+    margin: 1%;
+}
+
+.mat-30 {
+    width: 31.33%;
+    margin: 1%;
+}
+
+.mat-4 {
+    width: 23%;
+}
+
+.mat-radio-button {
+    margin: 1%;
+    vertical-align: middle;
+}
+
+.Botones {
+    margin: 2%;
+    text-align: right;
+}
+
+.Radio {
+    margin: 15px 0px 10px 15px;
+}
+
+/*  */
+.example-section {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    height: 60px;
+  }
+
+:host ::ng-deep .mat-progress-spinner circle, .mat-spinner circle {   
+    stroke: #ffffff;
+}

@@ -1,0 +1,62 @@
+<h2 style="margin: 20px 0px 10px 30px">{{ tituloAccion }} Cliente</h2>
+
+<mat-dialog-content>
+    <form [formGroup]="formularioAlumno">
+        <mat-grid-list cols="1" rowHeight="90px">
+            <mat-grid-tile>
+                <mat-form-field appearance="fill" style="width: 100%">
+                    <mat-label>Nombre</mat-label>
+                    <input type="text" matInput onkeydown="return /[a-zñá-ú, ]/i.test(event.key)"
+                        formControlName="nombre" autocomplete="off" />
+                </mat-form-field>
+                <!--  -->
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <mat-form-field appearance="fill" style="width: 100%">
+                    <mat-label>Apellido Paterno</mat-label>
+                    <input type="text" matInput onkeydown="return /[a-zñá-ú, ]/i.test(event.key)"
+                        formControlName="aPaterno" autocomplete="off" />
+                </mat-form-field>
+            </mat-grid-tile>
+            <!--  -->
+            <mat-grid-tile>
+                <mat-form-field appearance="fill" style="width: 100%">
+                    <mat-label>Apellido Paterno</mat-label>
+                    <input type="text" matInput onkeydown="return /[a-zñá-ú, ]/i.test(event.key)"
+                        formControlName="aMaterno" autocomplete="off" />
+                </mat-form-field>
+            </mat-grid-tile>
+            <!--  -->
+            <mat-grid-tile>
+                <mat-form-field style="width: 100%">
+                    <mat-label>Fecha de Nacimiento</mat-label>
+                    <input [readonly]="true" matInput [matDatepicker]="picker" formControlName="fecNaci">
+                    <mat-hint>DD/MM/YYYY</mat-hint>
+                    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+
+            </mat-grid-tile>
+            <!--  -->
+            <mat-grid-tile *ngIf="mostrarToggle">
+                <section>
+                    <mat-slide-toggle color="accent" formControlName="idEstatus">
+                        Estatus
+                    </mat-slide-toggle>
+                </section>
+
+            </mat-grid-tile>
+
+        </mat-grid-list>
+
+    </form>
+
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+    <button mat-flat-button mat-dialog-close color="warn">Volver</button>
+    <button mat-flat-button cdkFocusInitial [disabled]="formularioAlumno.invalid" color="primary"
+        (click)="guardarEditar()">
+        {{botonAccion}}
+    </button>
+</mat-dialog-actions>
