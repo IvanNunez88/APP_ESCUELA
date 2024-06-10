@@ -19,7 +19,6 @@ export class AlumnoService {
   }
 
   guardarAlumno(pNombre: string, pAaPaterno: string, pAMaterno: string, pFecNaci: string): Observable<iResponseApi> {
-
     interface iAltaAlumno {
       nombre: string,
       aPaterno: string,
